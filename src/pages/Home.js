@@ -16,7 +16,7 @@ function Home() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://marvel---backend.herokuapp.com/getAllCharacters"
+          "https://marvel---backend.herokuapp.com/getAllCharacters?limit=100&page=${page}"
         );
 
         setData(response.data.results);
